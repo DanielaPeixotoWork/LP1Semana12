@@ -28,5 +28,20 @@ namespace Palindrome
             return IsPalindromeRecursive(input, 0, input.Length - 1);
         }
 
+           private static bool IsPalindromeRecursive(string input, int left, int right)
+        {
+            if (left >= right)
+            {
+                return true;
+            }
+
+            if (input[left] != input[right])
+            {
+                return false;
+            }
+
+            return IsPalindromeRecursive(input, left + 1, right - 1);
+        }
+
     }
 }
