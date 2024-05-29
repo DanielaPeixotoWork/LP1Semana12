@@ -12,5 +12,21 @@ namespace Palindrome
                 Console.WriteLine($"{arg} -> {isPalindrome}");
             }
         }
+
+        static bool IsPalindrome(string input)
+        {
+            if (input == null)
+            {
+                throw new ArgumentNullException(nameof(input), "Input cannot be null");
+            }
+
+            if (input.Length < 2)
+            {
+                return true;
+            }
+
+            return IsPalindromeRecursive(input, 0, input.Length - 1);
+        }
+
     }
 }
