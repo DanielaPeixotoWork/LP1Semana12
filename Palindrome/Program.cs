@@ -6,7 +6,11 @@ namespace Palindrome
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            foreach (var arg in args)
+            {
+                bool isPalindrome = IsPalindrome(arg);
+                Console.WriteLine($"{arg} -> {isPalindrome}");
+            }
         }
     }
 }
