@@ -33,5 +33,15 @@ namespace MultipleStuff
 
             return new MinMax { Min = this.Min(), Max = this.Max() };
         }
+
+        public (double Min, double Max) GetMinMax3()
+        {
+            if (this.Count == 0)
+            {
+                throw new InvalidOperationException("The list is empty.");
+            }
+
+            return (this.Min(), this.Max());
+        }
     }
 }
