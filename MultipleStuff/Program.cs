@@ -43,5 +43,16 @@ namespace MultipleStuff
 
             return (this.Min(), this.Max());
         }
+
+        public (double minimum, double maximum) GetMinMax4()
+        {
+            if (this.Count == 0)
+            {
+                throw new InvalidOperationException("The list is empty.");
+            }
+
+            return (minimum: this.Min(), maximum: this.Max());
+        }
     }
+
 }
